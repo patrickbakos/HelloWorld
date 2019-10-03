@@ -9,7 +9,7 @@ agent any
     }
     stage('Run') {
       steps {
-        sh 'javac HelloWorld.java'
+        sh 'javac src/HelloWorld.java'
         }
      }
  }
