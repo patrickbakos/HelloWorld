@@ -9,6 +9,7 @@ agent any
     }
     stage('Run') {
       steps {
+        sh 'java -version'
         sh 'javac src/HelloWorld.java'
         sh 'java -cp "src/" HelloWorld'
         }
