@@ -16,6 +16,7 @@ agent any
      }
     stage('Merge into master') {
       steps {
+        sh 'ls'
         sh 'git checkout master'
         sh 'git pull'
         sh 'git merge origin/develop'
