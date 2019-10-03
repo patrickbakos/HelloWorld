@@ -17,7 +17,7 @@ agent any
     stage('Merge into master') {
       steps {
         sh 'git checkout master'
-        sh 'git merge develop'
+        sh 'git merge origin/develop'
         sh 'git push'
       }
     }
