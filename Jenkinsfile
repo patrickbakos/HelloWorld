@@ -14,10 +14,11 @@ agent any
         sh 'java -cp "src/" HelloWorld'
         }
      }
-    stage('Merge into master')
+    stage('Merge into master') {
       steps {
         sh 'git checkout master'
         sh 'git merge develop'
       }
+    }
  }
  }
