@@ -8,14 +8,16 @@ agent any
         }
     }
     stage('Run') {
-      agent {
-        docker { image 'openjdk:13-jdk' }
-        }
       steps {
         sh 'java -version'
         sh 'javac src/HelloWorld.java'
         sh 'java -cp "src/" HelloWorld'
         }
      }
+    stage('Merge into master')
+      steps {
+        sh 'git checkout master'
+        sh 'git merge develop'
+      }
  }
  }
