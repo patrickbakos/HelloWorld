@@ -16,8 +16,8 @@ agent any
      }
     stage('Merge into master') {
       steps {
-        sh 'git config user.email ${params.git_username}'
-        sh 'git config user.name ${params.git_password}'
+        sh 'git config user.email "${params.git_username}"'
+        sh 'git config user.name "${params.git_password}"'
         sh 'git checkout master'
         sh 'git pull'
         sh 'git merge origin/develop'
