@@ -21,7 +21,7 @@ agent any
         sh 'git checkout master'
         sh 'git pull'
         sh 'git merge origin/develop'
-        sh 'git push https://${git_username:$git_password@github.com/patrickbakos/HelloWorld.git'
+        sh 'git push https://$git_username:$git_password@github.com/patrickbakos/HelloWorld.git'
       }
     }
  }
