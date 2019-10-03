@@ -8,6 +8,9 @@ agent any
         }
     }
     stage('Run') {
+      tools {
+        jdk "jdk-1.13.0"
+                }
       steps {
         sh 'java -version'
         sh 'javac src/HelloWorld.java'
