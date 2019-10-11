@@ -1,8 +1,12 @@
 pipeline {
 agent any
+  environment {
+  KAKA='MAKA'
+  }
   stages {
     stage('Git clone') {
       steps {
+        sh 'echo $KAKA'
         sh 'rm -rf HelloWorld'
         sh 'git clone https://github.com/patrickbakos/HelloWorld.git'
         }
